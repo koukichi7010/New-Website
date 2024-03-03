@@ -143,3 +143,33 @@ body {
 .legend {
     text-align: center;
 }
+
+/*for mobile stuff*/
+
+@media only screen and (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+  
+    .header {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      align-items: center; /* Center elements horizontally */
+    }
+  
+    .navigation {
+      text-align: center; /* Center navigation links */
+    }
+  
+    .main {
+      padding: 20px; /* Reduce padding on small screens */
+    }
+  
+    .hero,
+    .features,
+    .contact {
+      margin-top: 20px; /* Increase spacing between sections */
+    }
+  
+    .contact form {
+      width: 80%; /* Reduce form width on small screens */
+    }
+  }
+  
