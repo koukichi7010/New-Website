@@ -83,7 +83,54 @@ body {
 }
 
 .footer {
-    background: linear-gradient(to bottom, #eee 0%, #fff 100%);
+    background: linear-gradient(to top, #eee 0%, #fff 100%);
     text-align: center;
     padding: 20px;
+}
+
+/* Contact Section Styles */
+.contact {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact .form-group {
+    margin-bottom: 15px;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contact textarea {
+    height: 100px;
+}
+
+.contact button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
