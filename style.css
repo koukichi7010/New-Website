@@ -92,16 +92,17 @@ body {
 .contact {
     margin-top: 50px;
     text-align: center;
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .contact form {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    display: flex; /* Maintain flex layout */
+    flex-direction: column; /* Stack elements vertically */
+    width: 100%; /* Take up full width within the contact section */
+    padding: 20px; /* Inner padding for form elements */
 }
 
 .contact .form-group {
@@ -109,31 +110,35 @@ body {
 }
 
 .contact label {
-    display: block;
+    display: block; /* Maintain block-level display for labels */
     margin-bottom: 5px;
+    font-weight: bold; /* Add slight emphasis to labels */
 }
 
 .contact input,
 .contact textarea {
-    width: 100%;
+    width: 100%; /* Maintain full width within form */
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    font-size: 16px; /* Increase font size for better readability */
 }
 
 .contact textarea {
-    height: 100px;
+    height: 150px; /* Increase textarea height */
 }
 
 .contact button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #007bff; /* Blue background for submit button */
+    color: #fff; /* White text color */
+    padding: 12px 20px; /* Adjust padding slightly */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    font-weight: bold; /* Make submit button text bolder */
 }
+
 
 .legend {
     text-align: center;
