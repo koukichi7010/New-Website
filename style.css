@@ -72,15 +72,11 @@ body {
     margin-bottom: 10px;
 }
 
-.features ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.features li {
-    margin-bottom: 10px;
-}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
 
 .footer {
     background: linear-gradient(to top, #eee 0%, #fff 100%);
@@ -89,56 +85,48 @@ body {
 }
 
 /* Contact Section Styles */
+/* style.css */
+
 .contact {
-    margin-top: 50px;
-    text-align: center;
-    background-color: #f5f5f5; /* Light gray background */
-    padding: 30px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.contact form {
-    display: flex; /* Maintain flex layout */
-    flex-direction: column; /* Stack elements vertically */
-    width: 100%; /* Take up full width within the contact section */
-    padding: 20px; /* Inner padding for form elements */
-}
-
-.contact .form-group {
-    margin-bottom: 15px;
-}
-
-.contact label {
-    display: block; /* Maintain block-level display for labels */
-    margin-bottom: 5px;
-    font-weight: bold; /* Add slight emphasis to labels */
-}
-
-.contact input,
-.contact textarea {
-    width: 100%; /* Maintain full width within form */
-    padding: 10px;
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 5px; /* Rounded corners for input fields */
-    font-size: 16px; /* Increase font size for better readability */
-}
-
-.contact textarea {
-    height: 150px; /* Increase textarea height */
-}
-
-.contact button {
-    background-color: #007bff; /* Blue background for submit button */
-    color: #fff; /* White text color */
-    padding: 12px 20px; /* Adjust padding slightly */
+    background-color: #f5f5f5; 
+    border-radius: 0.25rem;
+    padding: 1rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+  }
+  
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto 1rem;
+  }
+  
+  .contact input, 
+  .contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+  }
+  
+  .contact button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #0077cc;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.25rem;
     cursor: pointer;
-    margin-top: 10px;
-    font-weight: bold; /* Make submit button text bolder */
-}
-
+  }
+  
+  .contact button[type="submit"]:hover {
+    background-color: #005599;
+  }
+  
 
 .legend {
     text-align: center;
