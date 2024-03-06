@@ -1,163 +1,138 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
 
-.header {
-    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-    font-size: 2em;
-    font-weight: bold;
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
-.navigation {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.top-right-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-.navigation li {
-    display: inline-block;
-    margin-right: 20px;
+.top-right-button button {
+  background-color: transparent;
+  color: #333;
+  padding: 8px 16px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.navigation a {
-    text-decoration: none;
-    color: #333;
+.top-right-button button:hover {
+  background-color: rgba(51, 51, 51, 0.1);
 }
 
-.main {
-    padding: 50px;
+.contact-button {
+  background-color: transparent;
+  color: #333;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: 2px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.hero {
-    text-align: center;
-    margin-bottom: 50px;
+.contact-button:hover {
+  background-color: rgba(51, 51, 51, 0.1);
 }
 
-.hero h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.about-page, .contact-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+.about-content, .contact-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  max-width: 600px;
+  position: relative;
 }
 
-.hero button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.about-content p {
+  outline: none;
 }
 
-.features {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.features h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.close-btn img {
+  width: 20px;
+  height: 20px;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  text-align: left;
+}
 
 .footer {
-    background: linear-gradient(to top, #eee 0%, #fff 100%);
-    text-align: left;
-    padding: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
-/* Contact Section Styles */
-/* style.css */
-
-.contact {
-    background-color: #f5f5f5; 
-    border-radius: 0.25rem;
-    padding: 1rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .contact h2 {
-    font-size: 1.5rem;
+  100% {
+    opacity: 1;
   }
-  
-  .contact form {
-    max-width: 600px;
-    margin: 0 auto 1rem;
-  }
-  
-  .contact input, 
-  .contact textarea {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    border: 1px solid #ccc;
-  }
-  
-  .contact button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    background-color: #0077cc;
-    color: #fff;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
-  
-  .contact button[type="submit"]:hover {
-    background-color: #005599;
-  }
-  
-
-.legend {
-    text-align: center;
 }
 
-/*for mobile stuff*/
-
-@media only screen and (max-width: 768px) {
-    /* Styles for screens smaller than 768px */
-  
-    .header {
-      flex-direction: column; /* Stack elements vertically on small screens */
-      align-items: center; /* Center elements horizontally */
-    }
-  
-    .navigation {
-      text-align: center; /* Center navigation links */
-    }
-  
-    .main {
-      padding: 20px; /* Reduce padding on small screens */
-    }
-  
-    .hero,
-    .features,
-    .contact {
-      margin-top: 20px; /* Increase spacing between sections */
-    }
-  
-    .contact form {
-      width: 80%; /* Reduce form width on small screens */
-    }
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
-  
+  100% {
+    opacity: 0;
+  }
+}

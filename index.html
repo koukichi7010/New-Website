@@ -1,69 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pathfinder LLC</title>
+<html>
+  <head>
+    <title>Pathfinder</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="header">
-        <h1 class="logo">Pathfinder</h1>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact (not yet)</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="main">
-        <section class="hero">
-            <h2>Welcome to our Website</h2>
-            <p>At Pathfinder, we're a seasoned trio of web development freelancers dedicated to bringing your online vision to life. With a combined expertise in various aspects of web development, we offer a comprehensive service that encompasses design, functionality, and user experience. Whether you require a sleek website, a user-friendly e-commerce platform, or anything in between, we leverage our individual strengths and collaborative spirit to deliver exceptional results tailored to your specific needs.</p>
-            <button>Learn More</button>
-        </section>
-
-        <section class="cards">
-            <div class="card">
-              <h3>3 team proccess</h3>
-              <p>Team A designs the product, Team B builds the product, and Team C tests the product..</p>
-            </div>
-            
-            <div class="card">
-              <h3>Low Commission Pay</h3>
-              <p>we only need low commissions rather than those who want higher pay.</p>
-            </div>
-            
-            <div class="card">
-              <h3>still working</h3>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-            </div>
-          </section>
-       <fieldset>
-        <legend class="legend"></legend>
-        <!-- index.html -->
-
-<section class="contact">
-
-    <h2>Contact Us</h2>
-  
-    <form action="" method="post">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  
-  </section>
-  
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2024 Pathfinder LLC</p>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-right-button">
+        <button id="aboutBtn">About Us</button>
+      </div>
+      <h1>Pathfinder</h1>
+      <button class="contact-button" id="contactBtn">Contact Us</button>
+    </div>
+    <div class="about-page" id="aboutPage">
+      <div class="about-content">
+        <button class="close-btn" id="closeAboutBtn"><img src="assets/close-button.png" alt="Close"></button>
+        <h2>About Us</h2>
+        <p contenteditable="true">At Pathfinder, we're a seasoned trio of web development freelancers dedicated to bringing your online vision to life. With a combined expertise in various aspects of web development, we offer a comprehensive service that encompasses design, functionality, and user experience. Whether you require a sleek website, a user-friendly e-commerce platform, or anything in between, we leverage our individual strengths and collaborative spirit to deliver exceptional results tailored to your specific needs.</p>
+      </div>
+    </div>
+    <section class="cards">
+      <div class="card">
+        <h3>3 team proccess</h3>
+        <p>Team A designs the product, Team B builds the product, and Team C tests the product.</p>
+      </div>
+      <div class="card">
+        <h3>Low Commission Pay</h3>
+        <p>We only need low commissions rather than those who want higher pay.</p>
+      </div>
+      <div class="card">
+        <h3>Still working</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      </div>
+    </section>
+    <div class="contact-page" id="contactPage">
+      <div class="contact-content">
+        <button class="close-btn" id="closeContactBtn"><img src="assets/close-button.png" alt="Close"></button>
+        <h2>Contact Us</h2>
+        <p>Email: info@pathfinder.com</p>
+        <p>Phone: placeholder</p>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright 2024 Pathfinder LLC.</p>
     </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
