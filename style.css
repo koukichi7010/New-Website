@@ -97,26 +97,117 @@ h1 {
   height: 20px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+.header-title {
+  margin: 0;
+  transition: font-size 0.5s ease;
+}
+
+.header-title.shrink {
+  font-size: 24px;
+}
+
+.contact-button {
+  transition: opacity 0.5s ease;
+}
+
+.contact-button.hide {
+  opacity: 0;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  margin-top: 150px; /* Adjust this value to create space for the fixed header */
+  margin-bottom: 50px;
+  flex: 1;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  padding: 1rem;
-  text-align: left;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .top-right-button {
+    order: 1;
+    margin-right: auto;
+  }
+
+  .header-title {
+    order: 2;
+    margin-top: 10px;
+  }
+
+  .contact-button {
+    order: 3;
+    margin-left: auto;
+  }
+}
+
+.header-title {
+  transition: transform 0.5s ease, font-size 0.5s ease;
+}
+
+.header-title.shrink {
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+
+.contact-button {
+  transition: opacity 0.5s ease;
+}
+
+.contact-button.hide {
+  opacity: 0;
 }
 
 .footer {
   background-color: #333;
   color: #fff;
   padding: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 @keyframes fadeIn {
@@ -135,4 +226,4 @@ h1 {
   100% {
     opacity: 0;
   }
-}
+} 
