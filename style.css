@@ -19,6 +19,10 @@ h1 {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  position: sticky;
+  top: 5; 
+  background-color: white; 
+  z-index: 100; 
 }
 
 .top-right-button {
